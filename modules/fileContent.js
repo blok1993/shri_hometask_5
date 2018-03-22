@@ -1,6 +1,6 @@
 let express = require('express');
 let router = express.Router();
 
-router.get('/fileContent', (req, res, next) => {});
+router.get('/fileContent', () => {});
 
 module.exports = router;

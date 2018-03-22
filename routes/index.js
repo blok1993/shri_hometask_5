@@ -10,8 +10,8 @@ const checkout = (req, res) => {
     let branch = req.params.branch;
 
     gitSpawn(['checkout', branch]).then((err) => {
-        console.log(err);
-    }, (result) => {
+        throw err;
+    }, () => {
         gitBranch(res);
     });
 };
@@ -20,7 +20,7 @@ router.get('/git/show/:param/*', showCommitFiles);
 router.get('/git/cat/:param', showFile);
 router.get('/git/:action/:branch', checkout);
 
-router.get('/', (req, res, next) => {
+router.get('/', (req, res) => {
     gitBranch(res);
 });
 

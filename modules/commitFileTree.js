@@ -4,6 +4,6 @@ let showFile = require('./showFile');
 
 router.get('/git/cat/:param', showFile);
 
-router.get('/commitFileTree', (req, res, next) => {});
+router.get('/commitFileTree', () => {});
 
 module.exports = router;

@@ -1,13 +1,10 @@
-let express = require('express');
-let router = express.Router();
-let path = require('path');
 let config = require('../config');
 
 const spawn = require('child_process').spawn;
 
-const gitSpawn = command => (
+const gitSpawn = (command) => (
     new Promise((resolve, reject) => {
-        const thread = spawn('git', command, { cwd: config.get("repoPath"), stdio: ['inherit', 'pipe', 'pipe'] });
+        const thread = spawn('git', command, {cwd: config.get('repoPath'), stdio: ['inherit', 'pipe', 'pipe']});
         const stdOut = [];
         const stdErr = [];
 
