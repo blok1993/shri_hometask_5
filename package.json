@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "lint": "eslint **/*.js"
+    "lint": "eslint **/*.js",
+    "test": "./node_modules/.bin/hermione hermione/integration.hermione.js",
+    "build": "npm run lint"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
@@ -18,6 +20,8 @@
   },
   "devDependencies": {
     "eslint": "^4.19.1",
-    "eslint-config-google": "^0.9.1"
+    "eslint-config-google": "^0.9.1",
+    "hermione": "^0.65.2",
+    "html-reporter": "^2.8.1"
   }
 }

@@ -63,7 +63,7 @@ const gitBranch = (res) => {
                     }
                 });
 
-                res.render('index', {branchName: finalBranchArray, commits: endCommitsArray, fileTree: finalTreeArray});
+                res.render('index', {title: 'Module and integration tests', branchName: finalBranchArray, commits: endCommitsArray, fileTree: finalTreeArray});
             });
         });
     });
