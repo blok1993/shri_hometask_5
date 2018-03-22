@@ -28,16 +28,16 @@ app.use('/commitFileTree', commitFileTree);
 
 app.use((req, res, next) => {
     let err = new Error('Not Found');
-err.status = 404;
-next(err);
+    err.status = 404;
+    next(err);
 });
 
-app.use((err, req, res, next) => {
+app.use((err, req, res) => {
     res.locals.message = err.message;
-res.locals.error = req.app.get('env') === 'development' ? err : {};
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-res.status(err.status || 500);
-res.render('error');
+    res.status(err.status || 500);
+    res.render('error');
 });
 
 app.listen(app.get('port'), () => console.log('Express app listening on ' + app.get('host') + ':' + app.get('port')));
