@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "lint": "eslint modules/*.js routes/*.js"
+    "start": "node app.js",
+    "lint": "eslint modules/*.js routes/*.js",
+    "build": "npm run lint"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
