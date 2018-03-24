@@ -1,20 +1,10 @@
 let express = require('express');
 let router = express.Router();
 
-let gitSpawn = require('../modules/gitSpawn');
+let checkout = require('../modules/gitCheckout');
 let showFile = require('../modules/showFile');
 let showCommitFiles = require('../modules/showCommitFiles');
 let gitBranch = require('../modules/gitBranch');
-
-const checkout = (req, res) => {
-    let branch = req.params.branch;
-
-    gitSpawn(['checkout', branch]).then((err) => {
-        throw err;
-    }, () => {
-        gitBranch(res);
-    });
-};
 
 router.get('/git/show/:param/*', showCommitFiles);
 router.get('/git/cat/:param', showFile);
