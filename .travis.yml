@@ -9,3 +9,15 @@ script:
  - npm run lint
  - npm run test
  - npm run build
+
+jobs:
+ include:
+   - stage: Deploy
+     script:
+       - npm run build
+     deploy:
+       provider: heroku
+       app: shri-hometask-5-v1
+       api_key:
+         secure: gSly+Kvzd5uSul15CVaEV91ALwsGSU7yJLHSK0vk+oqjmLm0jp05iiKfs08j\n/Wo0DG8l4O9WT0mCEnMoMBwX4GiK4mUmGdKt0R2/2IAea+M44kBoKsiRM7R3\n+62xEl0q9Wzt8Aw3GCDY4XnoCyirO49DpCH6a9JEAfILY/n6qF8=
+       skip_cleanup: true
