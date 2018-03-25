@@ -1,7 +1,7 @@
 let gitSpawn = require('./gitSpawn');
 
 const gitBranch = (res) => {
-    gitSpawn(['branch']).then((branchInfo) => {
+    return gitSpawn(['branch']).then((branchInfo) => {
         let branchArray = branchInfo.split('\n');
         let finalBranchArray = [];
 

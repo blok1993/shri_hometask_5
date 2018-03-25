@@ -2,9 +2,12 @@ let config = require('../config');
 
 const spawn = require('child_process').spawn;
 
-const gitSpawn = (command, repoPath) => (
-    new Promise((resolve, reject) => {
-        const thread = spawn('git', command, {cwd: repoPath || config.get('repoPath'), stdio: ['inherit', 'pipe', 'pipe']});
+const gitSpawn = (command, repoPath) => {
+    return new Promise((resolve, reject) => {
+        const thread = spawn('git', command, {
+            cwd: repoPath || config.get('repoPath'),
+            stdio: ['inherit', 'pipe', 'pipe']
+        });
         const stdOut = [];
         const stdErr = [];
 
@@ -25,6 +28,6 @@ const gitSpawn = (command, repoPath) => (
             resolve(stdOut.join());
         });
     })
-);
+};
 
 module.exports = gitSpawn;

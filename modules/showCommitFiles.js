@@ -6,7 +6,7 @@ const showCommitFiles = (req, res) => {
     let relPath = (filesForAnotherCommit ? '.' : req.params['0']) || '.';
 
     // Получаем список всех файлов у конкретного коммита
-    gitSpawn(['ls-tree', '-r', commitHash, relPath]).then((treeInfo) => {
+    return gitSpawn(['ls-tree', '-r', commitHash, relPath]).then((treeInfo) => {
         let treeArray = treeInfo.replace(/\t/g, ' ').split('\n');
         let finalTreeArray = [];
         let tempDirArray = [];

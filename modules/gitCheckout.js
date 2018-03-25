@@ -4,7 +4,7 @@ let gitBranch = require('./gitBranch');
 const checkout = (req, res) => {
     let branch = req.params.branch;
 
-    gitSpawn(['checkout', branch]).then((err) => {
+    return gitSpawn(['checkout', branch]).then((err) => {
         throw err;
     }, () => {
         gitBranch(res);
