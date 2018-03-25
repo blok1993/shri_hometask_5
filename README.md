@@ -24,7 +24,6 @@
     - Произведены все необходимые настройки Github, Travis и Heroku, но не удалось сгенерировать api key из-за ошибки в моей ОС (Ubuntu 16.04). Ruby gem никак не мог скачаться (Unable to download data from rubygems.org...), из-за чего не смог установить Travis CLI. Воспользовался сервисом https://travis-encrypt.github.io/ - но это не решило проблему. Job log от Travis: "API request failed. Message: Invalid credentials provided. / invalid option '--api_key='".
 
 # Тесты
-  # ! 
   Для демонстрации работы тестов, необходимо сначала выполнить команду "npm run clone-test-repo", затем поменять repoPath в конфиге на "test-repo". Тесты написаны конкретно под этот тестовый репозиторий.
 
   1. Модульные тесты.
