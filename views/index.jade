@@ -10,18 +10,18 @@ block content
                 if val.current
                     a.current(href="/git/checkout/#{val.name}") #{val.name}
                 else
-                    a(href="/git/checkout/#{val.name}") #{val.name}
+                    a.other(href="/git/checkout/#{val.name}") #{val.name}
 
     h3= "История коммитов выбранной ветки"
     ul.branch-commit-history
         each commit in commits
-            li
+            li.commit-el
                 a(href="/git/show/#{commit.commitHash}/initialSecretValue") #{commit.str}
 
     h3= "Дерево файлов"
     ul.files-tree
         each file in fileTree
-            li
+            li.tree-line
                 if file.hash
                     a.file(href="/git/cat/#{file.hash}") #{file.filePath}
                 else

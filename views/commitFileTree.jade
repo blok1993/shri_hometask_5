@@ -3,14 +3,14 @@ extends layout
 
 block content
 
-    a(href="/") Home
+    a.home(href="/") Home
 
     h3 Дерево файлов для коммита  #{commitHash}
     ul.files-tree
         li
             a.back(href="/git/show/#{commitHash}/#{prevDir}") ..
         each file in fileTree
-            li
+            li.tree-line
                 if file.hash
                     a.file(href="/git/cat/#{file.hash}") #{file.filePath}
                 else
