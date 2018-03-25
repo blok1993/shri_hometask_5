@@ -5,6 +5,9 @@
   "scripts": {
     "start": "node app.js",
     "lint": "eslint modules/*.js routes/*.js",
+    "clone-test-repo": "git clone https://github.com/blok1993/test-repo.git",
+    "module-test": "mocha test/*.test.js",
+    "integration-test": "./node_modules/.bin/hermione hermione/integration.hermione.js",
     "build": "webpack",
     "build:prod": "NODE_ENV=production npm run build"
   },
