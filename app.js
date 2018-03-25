@@ -40,6 +40,6 @@ app.use((err, req, res) => {
     res.render('error');
 });
 
-app.listen(app.get('port'), () => console.log('Express app listening on ' + app.get('host') + ':' + app.get('port')));
+app.listen(app.get('port'), () => console.error('Express app listening on ' + app.get('host') + ':' + app.get('port')));
 
 module.exports = app;
