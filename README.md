@@ -21,6 +21,6 @@
     - Dockerfile лежит в корне проекта.
     
   4. Continuous Integration
-    - Произведены все необходимые настройки Github, Travis и Heroku, но не удалось сгенерировать api key из-за ошибки в моей ОС (Ubuntu 16.04). Ruby gem никак не мог скачаться (Unable to download data from rubygems.org...), из-за чего не смог установить Travis CLI. Воспользовался сервисом https://travis-encrypt.github.io/ - но это не решило проблему. Job log от Travis: "API request failed. Message: Invalid credentials provided."
+    - Произведены все необходимые настройки Github, Travis и Heroku, но не удалось сгенерировать api key из-за ошибки в моей ОС (Ubuntu 16.04). Ruby gem никак не мог скачаться (Unable to download data from rubygems.org...), из-за чего не смог установить Travis CLI. Воспользовался сервисом https://travis-encrypt.github.io/ - но это не решило проблему. Job log от Travis: "API request failed. Message: Invalid credentials provided. / invalid option '--api_key='".
 
 # Тесты
