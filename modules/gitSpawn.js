@@ -2,10 +2,10 @@ let config = require('../config');
 
 const spawn = require('child_process').spawn;
 
-const gitSpawn = (command, repoPath) => {
+const gitSpawn = (command) => {
     return new Promise((resolve, reject) => {
         const thread = spawn('git', command, {
-            cwd: repoPath || config.get('repoPath'),
+            cwd: config.get('repoPath'),
             stdio: ['inherit', 'pipe', 'pipe']
         });
         const stdOut = [];
