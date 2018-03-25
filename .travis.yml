@@ -18,6 +18,4 @@ jobs:
      deploy:
        provider: heroku
        app: shri-hometask-5-v1
-       api_key:
-         secure: Nnb6ScawcWn/qvG382jdB0F8jZjAlnJel+V299zTMKq7e0GCkJ7WuXDftGM7QqU6+UYuf7sh53AYAh78/I/bvbsY87w4NT5EvrZ3csjyBAP9tq+fVfpyRkhkktdTtVcL1RIMRGXnfZOmCqN4S5s2hy98wuZpffMmIxABPGsHBpPhgdMDEH6PZzCaNpIW9Kj74d1Yp9FTLrmfZj+nRX9Kjz2P7NdO306ffXu95shE72TT8c2xVbpPhiOuER7UNGjLj7Xeti9oYHVr+3t1WQ3DOv50y/4rc+VWmOr2xMUnbTiUHUKNsGcbTG63HDGZdhs3On7MRGoJcQeXIy8bGH6FNjRWJG3QSXtYOccoDAoshdMc7k8toOCFcJcR4b1kH7Dq8lTraiqjLY4wxbiSYdCf4dcE5OuJcNRJxyY6DlSgQH0fawEdjAUPlHVY4dfzEOAZsJpbB88BzgAIkmc+E14EsUOOi02buMc110Ed3Jb8Rq/E/6FmzdmBkqikg9yCtLUYrRBdataiMfMegRVin3Sr6Gg9E37qJj93k7/6ETPCN0jFgdtVz/QvcG8Sm8X2RQ90KnvKRATk0omtja4a9JSoQ5JpOnYGMa2ohq+YHIBpKAsK0b9JCxGb80o++s4FG/6q9pJJrIfMS6hMN5cbRQUU5WhSLaD9sQ0mjTouAgDp5iY=
        skip_cleanup: true
