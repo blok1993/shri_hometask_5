@@ -5,22 +5,29 @@
   "scripts": {
     "start": "node app.js",
     "lint": "eslint modules/*.js routes/*.js",
-    "build": "npm run lint"
+    "build": "webpack",
+    "build:prod": "NODE_ENV=production npm run build"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
+    "chai": "^4.1.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.15.5",
     "jade": "~1.11.0",
+    "mocha": "^5.0.5",
     "morgan": "~1.9.0",
     "nconf": "^0.10.0",
-    "serve-favicon": "~2.4.5"
+    "serve-favicon": "~2.4.5",
+    "webpack": "^4.2.0",
+    "css-loader": "^0.28.11",
+    "style-loader": "^0.20.3",
+    "webpack-cli": "^2.0.12"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-config-google": "^0.9.1",
     "hermione": "^0.65.2",
-    "html-reporter": "^2.8.1"
+    "html-reporter": "^2.8.2"
   }
 }

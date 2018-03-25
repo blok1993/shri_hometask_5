@@ -1,12 +1,17 @@
-a(href="/") Home
+title= title
+extends layout
 
-h3 Дерево файлов для коммита  #{commitHash}
-ul.files-tree
-    li
-        a.back(href="/git/show/#{commitHash}/#{prevDir}") ..
-    each file in fileTree
+block content
+
+    a(href="/") Home
+
+    h3 Дерево файлов для коммита  #{commitHash}
+    ul.files-tree
         li
-            if file.hash
-                a.file(href="/git/cat/#{file.hash}") #{file.filePath}
-            else
-                a.dir(href="/git/show/#{commitHash}/#{file.filePath}") #{file.dirName}
+            a.back(href="/git/show/#{commitHash}/#{prevDir}") ..
+        each file in fileTree
+            li
+                if file.hash
+                    a.file(href="/git/cat/#{file.hash}") #{file.filePath}
+                else
+                    a.dir(href="/git/show/#{commitHash}/#{file.filePath}") #{file.dirName}

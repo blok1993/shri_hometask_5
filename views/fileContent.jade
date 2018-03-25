@@ -1,5 +1,10 @@
-a(href="/") Home
-div
-a.close-file(href onclick="history.back(-1); return false;") Back
+title= title
+extends layout
 
-p.file-content #{fileContent}
+block content
+
+    a(href="/") Home
+    div
+    a.close-file(href onclick="history.back(-1); return false;") Back
+
+    p.file-content #{fileContent}
